@@ -1,0 +1,27 @@
+<div class="button-container">
+  <button routerLink="/add">Add</button>
+</div>
+<div class="card">
+  <table class="table">
+      <thead class="table-header">
+        <tr>
+          <th>Title</th>
+          <th>Description</th>
+          <th>Departments</th>
+          <th>Status</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody class="table-body">
+        <tr *ngFor="let bulletinpost of bulletinpost">
+          <td>{{ bulletinpost.title }}</td>
+          <td>{{ bulletinpost.description }}</td>
+          <td>{{ bulletinpost.departments }}</td>
+          <td>{{ bulletinpost.status }}</td>
+          <td>
+            <button (click)="ondelete(bulletinpost._id)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+  </table>
+</div>

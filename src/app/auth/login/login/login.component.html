@@ -1,0 +1,21 @@
+<div class="card">
+    <form (submit)="onlogin(loginform)" #loginform="ngForm" class="card-form">
+        <input type="text"
+        ngModel name="enteredusername"
+        placeholder="Username"
+        required
+        minlength="1"
+        #enteredusername ="ngModel"/>
+        <div *ngIf="enteredusername.invalid && (enteredusername.dirty || enteredusername.touched)">Invalid</div>
+        
+        <input type="password"
+        ngModel name="enteredpassword"
+        placeholder="Password"
+        required
+        minlength="1"
+        #enteredpassword ="ngModel"/>
+        <div *ngIf="enteredpassword.invalid && (enteredpassword.dirty || enteredpassword.touched)">Invalid</div>
+
+        <button type="submit">{{option.charAt(0).toUpperCase() + option.slice(1)}}</button>
+    </form>
+</div>

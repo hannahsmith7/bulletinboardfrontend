@@ -1,0 +1,36 @@
+.main-container {
+    min-height: 100vh;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333333;
+    color: #AED6F1;
+    padding: 10px 30px;
+    height: 60px;
+}
+
+.header-container h2 {
+    display: flex;
+}
+
+.nav-container {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-container a {
+    color: #AED6F1;
+    text-decoration: none;
+}
+
+.router-outlet-container {
+    display: flex;
+    justify-content: center;
+    background-color: #D6EAF8;
+    color: #333333;
+    padding: 20px;
+    min-height: calc(100vh - 60px);
+}
